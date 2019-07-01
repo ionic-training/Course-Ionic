@@ -1,1 +1,1 @@
-# Day_03_Basics-JavaScript
+# 03: Basics - JavaScript
