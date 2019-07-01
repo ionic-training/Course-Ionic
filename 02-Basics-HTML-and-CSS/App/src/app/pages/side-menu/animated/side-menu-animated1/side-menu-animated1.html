@@ -1,0 +1,80 @@
+<ion-header>
+	<ion-navbar no-border-bottom>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Animation Examples</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div padding>
+		<ion-segment [(ngModel)]="demo" (tap)="segmentTapped()">
+			<ion-segment-button value="1">Demo 1</ion-segment-button>
+			<ion-segment-button value="2">Demo 2</ion-segment-button>
+			<ion-segment-button value="3">Demo 3</ion-segment-button>
+			<ion-segment-button value="4">Demo 4</ion-segment-button>
+			<ion-segment-button value="5">Demo 5</ion-segment-button>
+			<ion-segment-button value="6">Demo 6</ion-segment-button>
+			<ion-segment-button value="7">Demo 7</ion-segment-button>
+			<ion-segment-button value="8">Demo 8</ion-segment-button>
+			<ion-segment-button value="9">Demo 9</ion-segment-button>
+			<ion-segment-button value="10">Demo 10</ion-segment-button>
+		</ion-segment>
+	</div>
+
+	<div [ngSwitch]="demo">
+		<div class="style1" *ngSwitchCase="'1'">
+		</div>
+	</div>
+
+	<div id="menu" class="style{{ demo }}">
+		<ul class="ca-menu">
+			<li>
+				<a href="#">
+					<span class="ca-icon">F</span>
+					<div class="ca-content">
+						<h2 class="ca-main">Exceptional Service</h2>
+						<h3 class="ca-sub">Personalized to your needs</h3>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="ca-icon">H</span>
+					<div class="ca-content">
+						<h2 class="ca-main">Creative Storytelling</h2>
+						<h3 class="ca-sub">Advanced use of technology</h3>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="ca-icon">N</span>
+					<div class="ca-content">
+						<h2 class="ca-main">Infographical Education</h2>
+						<h3 class="ca-sub">Understanding visually</h3>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="ca-icon">K</span>
+					<div class="ca-content">
+						<h2 class="ca-main">Sophisticated Team</h2>
+						<h3 class="ca-sub">Professionals in action</h3>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="ca-icon">L</span>
+					<div class="ca-content">
+						<h2 class="ca-main">Unconditional Support</h2>
+						<h3 class="ca-sub">24/7 for you needs</h3>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</ion-content>

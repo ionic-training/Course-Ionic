@@ -1,0 +1,29 @@
+
+ion-title {
+    color: #ffffff;
+    background-color: #00ff00;
+}
+
+h1 { color: #ff0000; background-color: #000000; font-family: 'Courier New', Courier, monospace; }
+h2 { color: #000000; background-color: #ff0000; font-style: italic; }
+
+.style1 { background-color: #00ff00; }
+.style2 { background-color: #ff0000; }
+
+.marine { background: #00ffff; }
+.yellow { background: #ffff00; }
+
+h3 > .marine {color: #ffffff; background-color: #000000; }
+
+.blocks {
+    padding: 5px 5px 5px 5px;
+    background-color: #bbbbbb; 
+
+    .block1 {
+        border: 1px 1px 1px 1px #000000;
+    }
+
+    .block1:hover {
+        background-color: #ff0000;
+    }
+}

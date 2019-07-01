@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>SideMenu: DropDown 1</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="container" id="container">
+		<ul>
+			<li class="dropdown" *ngFor="let menu1 of menu" id="menu1">
+				<!-- #menu1 > input[type="checkbox"] -->
+				<input type="checkbox" />
+
+				<a href="#" data-toggle="dropdown">{{ menu1.name }}</a>
+				<ul class="dropdown-menu">
+					<li *ngFor="let menu2 of menu1.items">
+						<a href="{{ menu2.link }}">{{ menu2.name }}</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</ion-content>

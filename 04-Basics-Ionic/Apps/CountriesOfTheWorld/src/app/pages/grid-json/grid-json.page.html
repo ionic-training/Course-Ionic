@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			List from JSON file
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let item of data" detail="true" tappable (click)="navigate(item)">
+		<ion-card-header>
+			<ion-row>
+				<ion-col><img [src]="item.flag">		</ion-col>
+				<ion-col><h1>{{ item.name }}</h1>		</ion-col>
+				<ion-col><h1>{{ item.nativeName }}</h1>	</ion-col>
+			</ion-row>
+		</ion-card-header>
+
+		<ion-card-content>Hauptstadt: {{ item.capital }}</ion-card-content>
+		<ion-card-content>Region: {{ item.region }} / {{ item.subregion }}</ion-card-content>
+	</ion-card>
+</ion-content>

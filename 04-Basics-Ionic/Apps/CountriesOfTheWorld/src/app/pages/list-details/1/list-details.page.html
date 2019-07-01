@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button router-direction="backword"></ion-back-button>
+		</ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-menu-button></ion-menu-button>
+		  </ion-buttons>
+		<ion-title>{{ item?.name }} : Details (Version 1)</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<h1>
+		<img [src]="flag" alt="{{ item?.name }}">
+		{{ item?.name }}
+	</h1>
+	<ion-list>
+		<ion-item [ngClass]="(i%2 == 0) ? 'even' : 'odd'" *ngFor="let item of items, let i = index">
+
+				<ion-col>{{ item?.key }}</ion-col>
+				<ion-col>{{ item?.val }}</ion-col>
+
+		</ion-item>
+
+	</ion-list>
+</ion-content>

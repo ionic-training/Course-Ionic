@@ -1,0 +1,7 @@
+{
+  "name": "working-with-css",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

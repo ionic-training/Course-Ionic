@@ -1,0 +1,46 @@
+<ion-menu [content]="content" id="menu">
+	<ion-header>
+		<!--
+			<ion-toolbar>
+				<ion-title>Menu</ion-title>
+			</ion-toolbar>
+		-->
+	</ion-header>
+
+	<ion-content>
+		<div #header>
+			<ion-row id="menu-headerrow" style="align-items:center;">
+				<ion-col col-3>
+				</ion-col>
+				<ion-col col-6>
+					<img class="user-avatar round" [src]="chosenPicture || placeholder" onerror="this.src='assets/imgs/logo-ionic-toolbox-3.png'"
+					/>
+				</ion-col>
+				<ion-col col-3>
+				</ion-col>
+			</ion-row>
+			<!--
+				<ion-row id="menu-headertitle" style="justify-content: center;">
+					<h3>Ionic Toolbox</h3>
+				</ion-row>
+			-->
+		</div>
+
+		<ul id="menu1">
+			<ul class="dropdown" *ngFor="let menu1 of menu">
+				<input type="checkbox" />
+				<a href="#" data-toggle="dropdown">{{ menu1.name }}</a>
+				<ul class="dropdown-menu" id="menu2">
+
+					<button menuClose ion-item detail-none *ngFor="let menu2 of menu1.items" (click)="openPage(menu2)">
+						<ion-icon [name]="menu2.icon" item-left></ion-icon>
+						{{ menu2.name }}
+					</button>
+				</ul>
+			</ul>
+		</ul>
+	</ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
